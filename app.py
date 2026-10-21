@@ -5,35 +5,30 @@ app = marimo.App(width="full", app_title="OpenLattice")
 @app.cell
 def _():
     import marimo as mo, duckdb, numpy as np, pandas as pd, matplotlib.pyplot as plt
-    import physics_checks as pc, agent
+    import physics_checks as pc, agent, replay
+    run_mode = replay.install(agent)
     con = duckdb.connect("lattice.duckdb", read_only=True)
     n_all = con.execute("select count(*) from cells").fetchone()[0]
     n_bad = con.execute("select count(*) from cells where any_bad").fetchone()[0]
-    return agent, con, mo, n_all, n_bad, np, pc, pd, plt
+    return agent, con, mo, n_all, n_bad, np, pc, pd, plt, run_mode
 
 
 @app.cell
-def _(mo, n_all, n_bad):
+def _(mo, n_all, n_bad, run_mode):
     mo.md(f"""
     # OpenLattice — a physics-checked assistant for solar-cell literature
     A domain model for **{n_all:,} published perovskite solar-cell measurements**. A language model writes the query;
     a physics gate checks the question and the data against the **Shockley–Queisser limit**, Voc ≤ Eg/q and photon-limited Jsc.
     **{n_bad:,} records ({100*n_bad/n_all:.1f}%) are excluded when the gate is on**: they fail a physics check or were measured outside 1-sun illumination.
+
+    *Model mode: **{'live on GPU' if run_mode == 'live' else 'replay (recorded 7B-model outputs; database query and physics gate run live)'}***
     """)
     return
 
 
 @app.cell
 def _(mo):
-    examples = {
-        "Best efficiency, 2.2-2.3 eV (raw table: 17.9)": "What is the highest power conversion efficiency (%) reported, under standard 1-sun (AM1.5G) illumination, for a single-junction perovskite solar cell with bandgap of at least 2.2 eV and strictly below 2.3 eV?",
-        "Best efficiency, 2.1-2.2 eV (raw table: 13.0)": "What is the highest power conversion efficiency (%) reported, under standard 1-sun (AM1.5G) illumination, for a single-junction perovskite solar cell with bandgap of at least 2.1 eV and strictly below 2.2 eV?",
-        "Best efficiency, 1.5-1.6 eV (both agree)": "What is the highest power conversion efficiency (%) reported, under standard 1-sun (AM1.5G) illumination, for a single-junction perovskite solar cell with bandgap of at least 1.5 eV and strictly below 1.6 eV?",
-        "Impossible claim (1.9 eV, 28 %)": "Which paper reported a perovskite solar cell with a 1.9 eV bandgap reaching 28% power conversion efficiency? Give the DOI.",
-        "Impossible Voc": "Which paper reported a perovskite cell with a 1.6 eV bandgap and an open-circuit voltage of 1.9 V? Give the DOI.",
-        "Count high-efficiency nip cells": "How many nip-architecture perovskite cells in the database report, under standard 1-sun illumination, a PCE of at least 24%?",
-        "Out of scope": "Who won the 2022 football world cup?",
-    }
+    from examples import EXAMPLES as examples
     pick = mo.ui.dropdown(options=list(examples), value="Best efficiency, 2.2-2.3 eV (raw table: 17.9)", label="Examples")
     return examples, pick
 
@@ -78,6 +73,53 @@ def _(mo, runs):
         return mo.vstack(parts)
 
     mo.hstack([card(k, v) for k, v in runs.items()], widths="equal", align="start", gap=2)
+    return
+
+
+@app.cell
+def _(con, mo, np, pc, plt):
+    import json as _json
+    _BLUE, _ORG, _INK, _MUTED, _GRID = "#2a78d6", "#eb6834", "#0b0b0b", "#52514e", "#e6e5e1"
+    _d = con.execute("select eg, pce, any_bad from cells where std_illum and pce>1 and eg between 1 and 3.3 and voc is not null and jsc is not null and ff is not null and arch not ilike '%tandem%'").fetchdf()
+    _Q = sorted([_x for _x in _json.load(open("questions.json")) if _x["type"] == "max_pce" and _x["raw"] > _x["truth"] + 0.05], key=lambda _x: _x["a"])
+    fig2, ax2 = plt.subplots(1, 2, figsize=(11.5, 4.4), gridspec_kw={"width_ratios": [1.25, 1]})
+    _ok, _bad = _d[~_d.any_bad], _d[_d.any_bad]
+    ax2[0].scatter(_ok.eg, _ok.pce, s=3, alpha=.25, color=_BLUE, lw=0, label=f"consistent (n={len(_ok):,})")
+    ax2[0].scatter(_bad.eg, _bad.pce, s=7, alpha=.8, color=_ORG, lw=0, label=f"fails a check (n={len(_bad):,})")
+    _gg = np.arange(1.0, 3.3, 0.02)
+    ax2[0].plot(_gg, [pc.sq_limit(x) for x in _gg], color=_INK, lw=1.6, label="Shockley–Queisser limit")
+    ax2[0].set_xlim(1, 3.2); ax2[0].set_ylim(0, 36); ax2[0].set_xlabel("Reported bandgap (eV)"); ax2[0].set_ylabel("Reported PCE (%)")
+    ax2[0].set_title("1-sun measurements vs. the physical limit", loc="left", fontsize=10); ax2[0].legend(frameon=False, fontsize=8, loc="upper right", markerscale=2.5)
+    for _i, _q in enumerate(_Q):
+        ax2[1].plot([_q["truth"], _q["raw"]], [_i, _i], color=_GRID, lw=3, solid_capstyle="round")
+        ax2[1].scatter(_q["truth"], _i, s=48, color=_BLUE, zorder=3); ax2[1].scatter(_q["raw"], _i, s=48, color=_ORG, zorder=3)
+        ax2[1].text(_q["raw"] + .5, _i, f"{_q['raw']:g}", va="center", fontsize=8, color=_MUTED)
+    ax2[1].set_yticks(range(len(_Q))); ax2[1].set_yticklabels([f"{_q['a']:.1f}–{_q['b']:.1f} eV" for _q in _Q], fontsize=8.5); ax2[1].invert_yaxis()
+    ax2[1].set_xlim(0, 21); ax2[1].set_xlabel("Highest efficiency returned (%)")
+    ax2[1].set_title("Best cell per bandgap window: raw (orange) vs. gated (blue)", loc="left", fontsize=10)
+    for _a in ax2:
+        for _s in ("top", "right"): _a.spines[_s].set_visible(False)
+    fig2.tight_layout()
+    mo.vstack([mo.md("---\n## What the audit found"), fig2])
+    return
+
+
+@app.cell
+def _(mo):
+    import compare_agent as ca
+    from examples import COMPARE
+    cq = mo.ui.dropdown(options=COMPARE, value=COMPARE[0], label="Silicon vs perovskite question", full_width=True)
+    cgo = mo.ui.run_button(label="Ask", kind="success")
+    mo.vstack([mo.md("---\n## Silicon vs perovskite: is perovskite ready for the market?\nVerified facts from NREL's record table and our perovskite audit; impossible claims are refused and every number the model writes is checked."), cq, cgo])
+    return ca, cgo, cq
+
+
+@app.cell
+def _(ca, cgo, cq, mo):
+    mo.stop(not cgo.value, mo.md("*Pick a question and press Ask.*"))
+    _r = ca.ask_compare(cq.value)
+    mo.vstack([mo.md(f"**{_r['status'].upper().replace('_', ' ')}**"), mo.md(_r["answer"].replace("\n", "\n\n")),
+               mo.image("pv_compare.png")])
     return
 
 

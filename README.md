@@ -133,7 +133,15 @@ python pv_compare.py cell-efficiency-data-table.xlsx
 python make_questions.py && python run_eval.py && python analyze.py
 ```
 
-**Demo:** open `OpenLattice.ipynb` in Jupyter and run the cells (pick an example, choose *Compare both*), or run the marimo app: `marimo run app.py`.
+**Interactive app (marimo).** Runs on any laptop, no GPU needed:
+
+```bash
+python3 -m venv venv && source venv/bin/activate
+pip install marimo duckdb numpy pandas matplotlib pvlib scipy
+marimo run app.py
+```
+
+Without a GPU the app replays the 7B model's recorded outputs (`replay_cache.json`, recorded on an RTX 3090 with `record_examples.py`); the database query and the physics gate still run live, and impossible claims are checked live for any text you type. With a GPU it calls the model directly. Pick an example, choose *Compare both*, and press *Ask OpenLattice*. The same demo is available as a Jupyter notebook: `OpenLattice.ipynb`.
 
 ## Repository map
 
@@ -147,8 +155,15 @@ python make_questions.py && python run_eval.py && python analyze.py
 | `pv_limits.py` · `pv_compare.py` | silicon and tandem limits; NREL comparison and figure |
 | `compare_agent.py` · `compare_cell.py` | cross-technology answers with claim gate and number check; notebook cell |
 | `spotlight.py` | lead-iodide statistics |
-| `app.py` · `OpenLattice.ipynb` | marimo app and Jupyter demo |
+| `app.py` · `OpenLattice.ipynb` | marimo app (with silicon comparison) and Jupyter demo |
+| `replay.py` · `examples.py` · `record_examples.py` · `replay_cache.json` | record and replay of model outputs so the app runs without a GPU |
 | `results.csv` · `summary.csv` · `questions.json` | raw evaluation outputs and questions |
+
+## Tools used
+
+- **Marimo**: the interactive app (`app.py`): question box, gate on/off side by side, audit figures, silicon-vs-perovskite panel and a live claim checker.
+- **Valency (MCP)**: literature search for the related-work table and to verify the silicon practical-limit reference.
+- **DuckDB** for the physics-flagged table, **Qwen2.5-7B-Instruct** for text-to-SQL, **pvlib** for the AM1.5G spectrum.
 
 ## What was reused
 

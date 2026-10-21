@@ -8,3 +8,5 @@ accelerate
 torch
 marimo
 ipywidgets
+pvlib
+openpyxl

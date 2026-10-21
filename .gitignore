@@ -8,3 +8,4 @@ out/
 patch_agent.py
 sql_prompt_new.txt
 audit_perovskite.py
+venv/
