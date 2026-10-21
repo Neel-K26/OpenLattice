@@ -156,7 +156,7 @@ The project scaffold (text-to-SQL agent structure, evaluation runner, DuckDB set
 
 ## Team
 
-**Neel Khairnar** (lead: code and strategy) · **Mayur Kharche**
+**Neel Khairnar** (lead: code and strategy) · **Mayur Kharche** (write-up and output submission refinements)
 
 ## License
 
