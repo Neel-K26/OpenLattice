@@ -1,0 +1,46 @@
+{
+ "tech_summary": [
+  {
+   "tech": "c-Si",
+   "best_pce": 28.1,
+   "year": 2026,
+   "lab": "Trina Solar",
+   "bandgap_ev": "1.12",
+   "sq_limit": 33.5,
+   "practical_limit": 29.0,
+   "pct_of_sq": 83.9,
+   "n_records": 125
+  },
+  {
+   "tech": "perovskite (single junction)",
+   "best_pce": 28.0,
+   "year": 2026,
+   "lab": "Hainan U",
+   "bandgap_ev": "1.5-1.6 (assumed; table has no bandgap)",
+   "sq_limit": 31.3,
+   "practical_limit": NaN,
+   "pct_of_sq": 89.4,
+   "n_records": 26
+  },
+  {
+   "tech": "perovskite/Si tandem",
+   "best_pce": 35.2,
+   "year": 2026,
+   "lab": "LONGi",
+   "bandgap_ev": "1.68 / 1.12 (assumed)",
+   "sq_limit": 42.7,
+   "practical_limit": NaN,
+   "pct_of_sq": 82.4,
+   "n_records": 17
+  }
+ ],
+ "stability": {
+  "perovskite_records": 40706,
+  "with_t80": 1763,
+  "median_t80_h": 150.0,
+  "max_t80_h": 8400.0,
+  "n_ge_1yr": 0
+ },
+ "si_practical_limit_note": "about 29% for 40-500 um wafers (Kowalczewski & Andreani, arXiv:1505.03985)",
+ "si_warranty_note": "commercial silicon modules typically carry 25-year or longer warranties (general industry knowledge, not from our data)"
+}

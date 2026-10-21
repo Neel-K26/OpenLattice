@@ -24,6 +24,7 @@ Team OpenLattice: **Neel Khairnar** · **Mayur Kharche**
 | **Problem** | A model that answers from a scientific database repeats whatever the records say, even when the numbers contradict each other or the laws of physics. |
 | **What we did** | We audited every 1-sun record in the [Perovskite Database](https://zenodo.org/records/5837035) against the Shockley–Queisser limit and four related checks, then built a gate that makes a language model answer only from physics-consistent records and refuse impossible claims with an explanation. |
 | **What we found** | 1,399 of 29,041 standard-condition records (**4.8%**, across **741 of 5,707 papers**) fail at least one check. In **8 of 16** "best cell in a bandgap window" questions the raw table's answer came only from failing records. With the gate: **0 of 16**. |
+| **Silicon vs perovskite** | We added NREL's record-cell table. Best perovskite cell **28.0%** vs best silicon **28.1%**, so efficiency is no longer the gap. Stability is: only 4.3% of perovskite records report a lifetime, median T80 150 h, longest 8,400 h, none reach a year. |
 | **Why it matters** | Any AI assistant over materials data inherits these errors. The same pattern works for batteries, semiconductors and other fields with physical constraints. |
 
 ## See it work
@@ -75,12 +76,33 @@ Qwen2.5-7B-Instruct on one RTX 3090, **identical prompt and schema in both arms*
 
 Where the failures come from: most are PCE that disagrees with Voc × Jsc × FF (1,280). Photon-limit violations (117) often reveal a mislabelled bandgap, for example MAPbI3 listed at 2.15 eV. Only 3 records exceed the Shockley–Queisser limit.
 
+## Silicon vs perovskite: why is perovskite not on the market yet?
+
+We added NREL's [Best Research-Cell Efficiency table](https://www.nrel.gov/pv/cell-efficiency.html) (563 record entries, 1976–2026) and a second gate for silicon and tandem claims.
+
+<img src="pv_compare.png" alt="Silicon vs perovskite records and distance to physical limits" width="900">
+
+| Technology | Best record (2026) | Physical limit used | Record as share of limit |
+|---|---|---|---|
+| Crystalline silicon | 28.1 % | 33.5 % (Shockley–Queisser, 1.12 eV); practical about 29 % | 84 % (97 % of practical) |
+| Perovskite, single junction | 28.0 % | 31.3 % (assumes 1.5–1.6 eV; the table has no bandgap) | 89 % |
+| Perovskite/silicon tandem | 35.2 % | 42.7 % (ideal two-terminal, 1.68/1.12 eV) | 82 % |
+
+- **Efficiency is not the blocker.** Single-junction records differ by 0.1 points.
+- **Stability is.** In the physics-consistent perovskite records, 1,763 of 40,706 report a T80 lifetime (median 150 h, longest 8,400 h, none one year). Commercial silicon modules typically carry 25-year or longer warranties (general industry knowledge, not from our data). The database holds typical devices, not record cells.
+- **Claim gate for silicon.** "Silicon at 40 %" and "tandem at 48 %" are refused as impossible. "Silicon at 31 %" is flagged as above the practical limit of about 29 % (Kowalczewski and Andreani, arXiv:1505.03985).
+- **Answer check.** Any figure the model writes that is not in the verified facts is flagged. This caught a model slip ("1.3 points lower" instead of 0.1) during testing.
+- The NREL table itself contains Voc values entered in mV (3 rows, fixed by the cleaning step) and 2 rows whose efficiency disagrees with Voc × Jsc × FF.
+
+Lead-iodide spotlight (`spotlight.py`): 27,992 of 42,443 records (about two thirds) are pure lead-iodide compositions. The best consistent MAPbI3 cell reaches 22.2 % (73 % of its limit), FAPbI3 24.7 % (76 %). The bandgap ranges used for those compositions are provisional.
+
 ## Honest limitations
 
 - **"Fails a check" means inconsistent as recorded, not proven wrong.** Some mismatches mix an average with a champion value. We checked a small sample against source papers, not all of them.
 - **The ground truth is defined by our own filter**, so accuracy figures describe how often the raw table's answer is affected, not an independent score.
 - **The impossible-premise result comes from a deterministic rule**, not from model intelligence. The baseline did not make anything up; it just never explained why nothing exists.
-- One database, one 7B model, 55 questions.
+- One perovskite database, one 7B model, 55 questions. Perovskite and tandem limits assume typical bandgaps, so they are estimates.
+- Electrochemical cells (batteries) are a planned extension of the same method (for example capacity cannot exceed nF/3.6M, coulombic efficiency cannot exceed 100%); not built yet.
 - Related work exists (see below). To our knowledge, the new parts are applying a detailed-balance (Shockley–Queisser) consistency audit to the Perovskite Database with quantified results, and an answer-time gate that restricts SQL answers to consistent 1-sun records and refuses impossible premises. We have not exhaustively searched for prior work.
 
 ## Related work (found with Valency semantic search)
@@ -104,6 +126,9 @@ pip install -r requirements.txt
 python build_db.py data/perovskite_db.csv      # builds lattice.duckdb with the physics flags
 python audit2.py data/perovskite_db.csv        # audit summary and figure
 
+# silicon vs perovskite (needs NREL's cell-efficiency xlsx)
+python pv_compare.py cell-efficiency-data-table.xlsx
+
 # 2. evaluation (needs a GPU with ~24 GB for the 7B model)
 python make_questions.py && python run_eval.py && python analyze.py
 ```
@@ -119,8 +144,15 @@ python make_questions.py && python run_eval.py && python analyze.py
 | `agent.py` | text-to-SQL with the physics gate and structured answers |
 | `make_questions.py` · `run_eval.py` · `analyze.py` | evaluation set, runner and scoring |
 | `audit2.py` | database audit and figure |
+| `pv_limits.py` · `pv_compare.py` | silicon and tandem limits; NREL comparison and figure |
+| `compare_agent.py` · `compare_cell.py` | cross-technology answers with claim gate and number check; notebook cell |
+| `spotlight.py` | lead-iodide statistics |
 | `app.py` · `OpenLattice.ipynb` | marimo app and Jupyter demo |
 | `results.csv` · `summary.csv` · `questions.json` | raw evaluation outputs and questions |
+
+## What was reused
+
+The project scaffold (text-to-SQL agent structure, evaluation runner, DuckDB setup) was adapted from our earlier oil-and-gas domain-model work. Everything specific to solar cells was built during the hackathon: the physics checks, audit, gate, question set, evaluation, silicon comparison, notebook and this repository.
 
 ## Team
 
