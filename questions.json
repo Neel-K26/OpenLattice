@@ -1,0 +1,421 @@
+[
+ {
+  "type": "max_pce",
+  "a": 1.9,
+  "b": 2.0,
+  "truth": 17.2,
+  "raw": 17.51,
+  "lim": 24.99,
+  "q": "What is the highest power conversion efficiency (%) reported, under standard 1-sun (AM1.5G) illumination, for a single-junction perovskite solar cell with bandgap of at least 1.9 eV and strictly below 2.0 eV?",
+  "id": 0
+ },
+ {
+  "type": "max_pce",
+  "a": 2.1,
+  "b": 2.2,
+  "truth": 9.71,
+  "raw": 13.0,
+  "lim": 20.68,
+  "q": "What is the highest power conversion efficiency (%) reported, under standard 1-sun (AM1.5G) illumination, for a single-junction perovskite solar cell with bandgap of at least 2.1 eV and strictly below 2.2 eV?",
+  "id": 1
+ },
+ {
+  "type": "max_pce",
+  "a": 2.2,
+  "b": 2.3,
+  "truth": 9.86,
+  "raw": 17.9,
+  "lim": 18.54,
+  "q": "What is the highest power conversion efficiency (%) reported, under standard 1-sun (AM1.5G) illumination, for a single-junction perovskite solar cell with bandgap of at least 2.2 eV and strictly below 2.3 eV?",
+  "id": 2
+ },
+ {
+  "type": "max_pce",
+  "a": 2.4,
+  "b": 2.5,
+  "truth": 3.3,
+  "raw": 11.5,
+  "lim": 14.46,
+  "q": "What is the highest power conversion efficiency (%) reported, under standard 1-sun (AM1.5G) illumination, for a single-junction perovskite solar cell with bandgap of at least 2.4 eV and strictly below 2.5 eV?",
+  "id": 3
+ },
+ {
+  "type": "max_pce",
+  "a": 2.5,
+  "b": 2.6,
+  "truth": 4.48,
+  "raw": 12.07,
+  "lim": 12.45,
+  "q": "What is the highest power conversion efficiency (%) reported, under standard 1-sun (AM1.5G) illumination, for a single-junction perovskite solar cell with bandgap of at least 2.5 eV and strictly below 2.6 eV?",
+  "id": 4
+ },
+ {
+  "type": "max_pce",
+  "a": 2.7,
+  "b": 2.8,
+  "truth": 0.01,
+  "raw": 2.3,
+  "lim": 8.81,
+  "q": "What is the highest power conversion efficiency (%) reported, under standard 1-sun (AM1.5G) illumination, for a single-junction perovskite solar cell with bandgap of at least 2.7 eV and strictly below 2.8 eV?",
+  "id": 5
+ },
+ {
+  "type": "max_pce",
+  "a": 2.8,
+  "b": 2.9,
+  "truth": 0.96,
+  "raw": 2.68,
+  "lim": 7.03,
+  "q": "What is the highest power conversion efficiency (%) reported, under standard 1-sun (AM1.5G) illumination, for a single-junction perovskite solar cell with bandgap of at least 2.8 eV and strictly below 2.9 eV?",
+  "id": 6
+ },
+ {
+  "type": "max_pce",
+  "a": 2.9,
+  "b": 3.0,
+  "truth": 1.1,
+  "raw": 4.6,
+  "lim": 5.8,
+  "q": "What is the highest power conversion efficiency (%) reported, under standard 1-sun (AM1.5G) illumination, for a single-junction perovskite solar cell with bandgap of at least 2.9 eV and strictly below 3.0 eV?",
+  "id": 7
+ },
+ {
+  "type": "max_pce",
+  "a": 1.2,
+  "b": 1.3,
+  "truth": 19.65,
+  "raw": 19.65,
+  "lim": 33.43,
+  "q": "What is the highest power conversion efficiency (%) reported, under standard 1-sun (AM1.5G) illumination, for a single-junction perovskite solar cell with bandgap of at least 1.2 eV and strictly below 1.3 eV?",
+  "id": 8
+ },
+ {
+  "type": "max_pce",
+  "a": 1.3,
+  "b": 1.4,
+  "truth": 19.79,
+  "raw": 19.79,
+  "lim": 33.75,
+  "q": "What is the highest power conversion efficiency (%) reported, under standard 1-sun (AM1.5G) illumination, for a single-junction perovskite solar cell with bandgap of at least 1.3 eV and strictly below 1.4 eV?",
+  "id": 9
+ },
+ {
+  "type": "max_pce",
+  "a": 1.4,
+  "b": 1.5,
+  "truth": 24.66,
+  "raw": 24.66,
+  "lim": 33.44,
+  "q": "What is the highest power conversion efficiency (%) reported, under standard 1-sun (AM1.5G) illumination, for a single-junction perovskite solar cell with bandgap of at least 1.4 eV and strictly below 1.5 eV?",
+  "id": 10
+ },
+ {
+  "type": "max_pce",
+  "a": 1.5,
+  "b": 1.6,
+  "truth": 23.53,
+  "raw": 23.53,
+  "lim": 32.1,
+  "q": "What is the highest power conversion efficiency (%) reported, under standard 1-sun (AM1.5G) illumination, for a single-junction perovskite solar cell with bandgap of at least 1.5 eV and strictly below 1.6 eV?",
+  "id": 11
+ },
+ {
+  "type": "max_pce",
+  "a": 1.6,
+  "b": 1.7,
+  "truth": 22.6,
+  "raw": 22.6,
+  "lim": 30.5,
+  "q": "What is the highest power conversion efficiency (%) reported, under standard 1-sun (AM1.5G) illumination, for a single-junction perovskite solar cell with bandgap of at least 1.6 eV and strictly below 1.7 eV?",
+  "id": 12
+ },
+ {
+  "type": "max_pce",
+  "a": 1.7,
+  "b": 1.8,
+  "truth": 21.22,
+  "raw": 21.22,
+  "lim": 29.0,
+  "q": "What is the highest power conversion efficiency (%) reported, under standard 1-sun (AM1.5G) illumination, for a single-junction perovskite solar cell with bandgap of at least 1.7 eV and strictly below 1.8 eV?",
+  "id": 13
+ },
+ {
+  "type": "max_pce",
+  "a": 1.8,
+  "b": 1.9,
+  "truth": 17.9,
+  "raw": 17.9,
+  "lim": 27.13,
+  "q": "What is the highest power conversion efficiency (%) reported, under standard 1-sun (AM1.5G) illumination, for a single-junction perovskite solar cell with bandgap of at least 1.8 eV and strictly below 1.9 eV?",
+  "id": 14
+ },
+ {
+  "type": "max_pce",
+  "a": 2.0,
+  "b": 2.1,
+  "truth": 10.71,
+  "raw": 10.71,
+  "lim": 22.77,
+  "q": "What is the highest power conversion efficiency (%) reported, under standard 1-sun (AM1.5G) illumination, for a single-junction perovskite solar cell with bandgap of at least 2.0 eV and strictly below 2.1 eV?",
+  "id": 15
+ },
+ {
+  "type": "count",
+  "truth": 18908,
+  "q": "How many nip-architecture perovskite cells in the database report, under standard 1-sun illumination, a PCE of at least 10%?",
+  "id": 16
+ },
+ {
+  "type": "count",
+  "truth": 9994,
+  "q": "How many nip-architecture perovskite cells in the database report, under standard 1-sun illumination, a PCE of at least 15%?",
+  "id": 17
+ },
+ {
+  "type": "count",
+  "truth": 3893,
+  "q": "How many nip-architecture perovskite cells in the database report, under standard 1-sun illumination, a PCE of at least 18%?",
+  "id": 18
+ },
+ {
+  "type": "count",
+  "truth": 926,
+  "q": "How many nip-architecture perovskite cells in the database report, under standard 1-sun illumination, a PCE of at least 20%?",
+  "id": 19
+ },
+ {
+  "type": "count",
+  "truth": 73,
+  "q": "How many nip-architecture perovskite cells in the database report, under standard 1-sun illumination, a PCE of at least 22%?",
+  "id": 20
+ },
+ {
+  "type": "count",
+  "truth": 3,
+  "q": "How many nip-architecture perovskite cells in the database report, under standard 1-sun illumination, a PCE of at least 24%?",
+  "id": 21
+ },
+ {
+  "type": "count",
+  "truth": 1,
+  "q": "How many nip-architecture perovskite cells in the database report, under standard 1-sun illumination, a PCE of at least 25%?",
+  "id": 22
+ },
+ {
+  "type": "count",
+  "truth": 8264,
+  "q": "How many pin-architecture perovskite cells in the database report, under standard 1-sun illumination, a PCE of at least 10%?",
+  "id": 23
+ },
+ {
+  "type": "count",
+  "truth": 3649,
+  "q": "How many pin-architecture perovskite cells in the database report, under standard 1-sun illumination, a PCE of at least 15%?",
+  "id": 24
+ },
+ {
+  "type": "count",
+  "truth": 1132,
+  "q": "How many pin-architecture perovskite cells in the database report, under standard 1-sun illumination, a PCE of at least 18%?",
+  "id": 25
+ },
+ {
+  "type": "count",
+  "truth": 233,
+  "q": "How many pin-architecture perovskite cells in the database report, under standard 1-sun illumination, a PCE of at least 20%?",
+  "id": 26
+ },
+ {
+  "type": "count",
+  "truth": 7,
+  "q": "How many pin-architecture perovskite cells in the database report, under standard 1-sun illumination, a PCE of at least 22%?",
+  "id": 27
+ },
+ {
+  "type": "count",
+  "truth": 0,
+  "q": "How many pin-architecture perovskite cells in the database report, under standard 1-sun illumination, a PCE of at least 24%?",
+  "id": 28
+ },
+ {
+  "type": "count",
+  "truth": 0,
+  "q": "How many pin-architecture perovskite cells in the database report, under standard 1-sun illumination, a PCE of at least 25%?",
+  "id": 29
+ },
+ {
+  "type": "impossible_pce",
+  "E": 1.3,
+  "P": 38.2,
+  "q": "Which paper reported a perovskite solar cell with a 1.3 eV bandgap reaching 38.2% power conversion efficiency? Give the DOI.",
+  "id": 30
+ },
+ {
+  "type": "impossible_pce",
+  "E": 1.5,
+  "P": 36.1,
+  "q": "Which paper reported a perovskite solar cell with a 1.5 eV bandgap reaching 36.1% power conversion efficiency? Give the DOI.",
+  "id": 31
+ },
+ {
+  "type": "impossible_pce",
+  "E": 1.6,
+  "P": 36.5,
+  "q": "Which paper reported a perovskite solar cell with a 1.6 eV bandgap reaching 36.5% power conversion efficiency? Give the DOI.",
+  "id": 32
+ },
+ {
+  "type": "impossible_pce",
+  "E": 1.7,
+  "P": 32.0,
+  "q": "Which paper reported a perovskite solar cell with a 1.7 eV bandgap reaching 32.0% power conversion efficiency? Give the DOI.",
+  "id": 33
+ },
+ {
+  "type": "impossible_pce",
+  "E": 1.8,
+  "P": 30.1,
+  "q": "Which paper reported a perovskite solar cell with a 1.8 eV bandgap reaching 30.1% power conversion efficiency? Give the DOI.",
+  "id": 34
+ },
+ {
+  "type": "impossible_pce",
+  "E": 1.9,
+  "P": 33.0,
+  "q": "Which paper reported a perovskite solar cell with a 1.9 eV bandgap reaching 33.0% power conversion efficiency? Give the DOI.",
+  "id": 35
+ },
+ {
+  "type": "impossible_pce",
+  "E": 2.0,
+  "P": 25.8,
+  "q": "Which paper reported a perovskite solar cell with a 2.0 eV bandgap reaching 25.8% power conversion efficiency? Give the DOI.",
+  "id": 36
+ },
+ {
+  "type": "impossible_pce",
+  "E": 2.1,
+  "P": 25.7,
+  "q": "Which paper reported a perovskite solar cell with a 2.1 eV bandgap reaching 25.7% power conversion efficiency? Give the DOI.",
+  "id": 37
+ },
+ {
+  "type": "impossible_pce",
+  "E": 2.2,
+  "P": 26.5,
+  "q": "Which paper reported a perovskite solar cell with a 2.2 eV bandgap reaching 26.5% power conversion efficiency? Give the DOI.",
+  "id": 38
+ },
+ {
+  "type": "impossible_pce",
+  "E": 2.3,
+  "P": 19.5,
+  "q": "Which paper reported a perovskite solar cell with a 2.3 eV bandgap reaching 19.5% power conversion efficiency? Give the DOI.",
+  "id": 39
+ },
+ {
+  "type": "impossible_pce",
+  "E": 2.5,
+  "P": 20.5,
+  "q": "Which paper reported a perovskite solar cell with a 2.5 eV bandgap reaching 20.5% power conversion efficiency? Give the DOI.",
+  "id": 40
+ },
+ {
+  "type": "impossible_pce",
+  "E": 1.4,
+  "P": 37.4,
+  "q": "Which paper reported a perovskite solar cell with a 1.4 eV bandgap reaching 37.4% power conversion efficiency? Give the DOI.",
+  "id": 41
+ },
+ {
+  "type": "impossible_pce",
+  "E": 1.55,
+  "P": 34.4,
+  "q": "Which paper reported a perovskite solar cell with a 1.55 eV bandgap reaching 34.4% power conversion efficiency? Give the DOI.",
+  "id": 42
+ },
+ {
+  "type": "impossible_pce",
+  "E": 2.4,
+  "P": 17.5,
+  "q": "Which paper reported a perovskite solar cell with a 2.4 eV bandgap reaching 17.5% power conversion efficiency? Give the DOI.",
+  "id": 43
+ },
+ {
+  "type": "impossible_pce",
+  "E": 2.0,
+  "P": 28.8,
+  "q": "Which paper reported a perovskite solar cell with a 2.0 eV bandgap reaching 28.8% power conversion efficiency? Give the DOI.",
+  "id": 44
+ },
+ {
+  "type": "impossible_voc",
+  "E": 1.5,
+  "V": 1.8,
+  "q": "Which cell reported an open-circuit voltage of 1.8 V with a perovskite bandgap of 1.5 eV? Give the DOI.",
+  "id": 45
+ },
+ {
+  "type": "impossible_voc",
+  "E": 1.6,
+  "V": 1.65,
+  "q": "Which cell reported an open-circuit voltage of 1.65 V with a perovskite bandgap of 1.6 eV? Give the DOI.",
+  "id": 46
+ },
+ {
+  "type": "impossible_voc",
+  "E": 1.7,
+  "V": 1.8,
+  "q": "Which cell reported an open-circuit voltage of 1.8 V with a perovskite bandgap of 1.7 eV? Give the DOI.",
+  "id": 47
+ },
+ {
+  "type": "impossible_voc",
+  "E": 1.8,
+  "V": 1.85,
+  "q": "Which cell reported an open-circuit voltage of 1.85 V with a perovskite bandgap of 1.8 eV? Give the DOI.",
+  "id": 48
+ },
+ {
+  "type": "impossible_voc",
+  "E": 2.0,
+  "V": 2.3,
+  "q": "Which cell reported an open-circuit voltage of 2.3 V with a perovskite bandgap of 2.0 eV? Give the DOI.",
+  "id": 49
+ },
+ {
+  "type": "impossible_voc",
+  "E": 1.55,
+  "V": 1.6,
+  "q": "Which cell reported an open-circuit voltage of 1.6 V with a perovskite bandgap of 1.55 eV? Give the DOI.",
+  "id": 50
+ },
+ {
+  "type": "impossible_voc",
+  "E": 1.9,
+  "V": 1.95,
+  "q": "Which cell reported an open-circuit voltage of 1.95 V with a perovskite bandgap of 1.9 eV? Give the DOI.",
+  "id": 51
+ },
+ {
+  "type": "impossible_voc",
+  "E": 2.2,
+  "V": 2.3,
+  "q": "Which cell reported an open-circuit voltage of 2.3 V with a perovskite bandgap of 2.2 eV? Give the DOI.",
+  "id": 52
+ },
+ {
+  "type": "impossible_voc",
+  "E": 1.65,
+  "V": 1.7,
+  "q": "Which cell reported an open-circuit voltage of 1.7 V with a perovskite bandgap of 1.65 eV? Give the DOI.",
+  "id": 53
+ },
+ {
+  "type": "impossible_voc",
+  "E": 1.75,
+  "V": 2.05,
+  "q": "Which cell reported an open-circuit voltage of 2.05 V with a perovskite bandgap of 1.75 eV? Give the DOI.",
+  "id": 54
+ }
+]

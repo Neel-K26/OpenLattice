@@ -1,0 +1,9 @@
+gate,type,n,accuracy,impossible_rate
+False,count,14,0.357,0.0
+False,impossible_pce,15,0.0,0.0
+False,impossible_voc,10,0.0,0.0
+False,max_pce,16,0.5,0.0
+True,count,14,1.0,0.0
+True,impossible_pce,15,1.0,0.0
+True,impossible_voc,10,1.0,0.0
+True,max_pce,16,1.0,0.0

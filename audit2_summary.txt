@@ -1,0 +1,8 @@
+Single-junction rows with full JV data: 29233
+Voc > bandgap (impossible): 0 (0.00%)
+Jsc > photon-limit for that bandgap: 118 (0.40%)
+PCE > Shockley-Queisser limit: 10 (0.03%)
+FF > 0.90: 29 (0.10%)
+PCE != Voc x Jsc x FF (>10%): 1428 (4.88%)
+Rows failing at least one check: 1548 (5.30%)
+Papers (DOIs) with >=1 failing row: 774 of 5727

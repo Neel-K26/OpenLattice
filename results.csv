@@ -1,0 +1,175 @@
+gate,id,type,correct,impossible_answer,value,truth,sql,text
+False,0,max_pce,False,False,17.51,17.2,SELECT max(pce) AS max_pce FROM cells WHERE light_mw BETWEEN 90 AND 110 AND eg >= 1.9 AND eg < 2.0,"The highest power conversion efficiency (%) reported for a single-junction perovskite solar cell with a bandgap of at least 1.9 eV and strictly below 2.0 eV, under standard 1-sun (AM1.5G) illumination, is 17.51%.
+
+ANSWER: 17.51%"
+False,1,max_pce,False,False,13.0,9.71,SELECT max(pce) AS max_pce FROM cells WHERE light_mw BETWEEN 90 AND 110 AND eg >= 2.1 AND eg < 2.2,"The highest power conversion efficiency (%) reported for a single-junction perovskite solar cell with a bandgap between 2.1 eV and 2.2 eV, under standard 1-sun (AM1.5G) illumination, is 13.0%.
+
+ANSWER: 13.0%"
+False,2,max_pce,False,False,17.9,9.86,SELECT max(pce) AS max_pce FROM cells WHERE light_mw BETWEEN 90 AND 110 AND eg >= 2.2 AND eg < 2.3,"The highest power conversion efficiency (%) reported for a single-junction perovskite solar cell with a bandgap of at least 2.2 eV and strictly below 2.3 eV, under standard 1-sun (AM1.5G) illumination, is 17.9%.
+
+ANSWER: 17.9%"
+False,3,max_pce,False,False,11.5,3.3,SELECT max(pce) AS max_pce FROM cells WHERE light_mw BETWEEN 90 AND 110 AND eg >= 2.4 AND eg < 2.5,"The highest power conversion efficiency (%) reported for a single-junction perovskite solar cell with a bandgap of at least 2.4 eV and strictly below 2.5 eV, under standard 1-sun (AM1.5G) illumination, is 11.5%.
+
+ANSWER: 11.5%"
+False,4,max_pce,False,False,12.07,4.48,SELECT max(pce) AS max_pce FROM cells WHERE light_mw BETWEEN 90 AND 110 AND eg >= 2.5 AND eg < 2.6,"The highest power conversion efficiency (%) reported for a single-junction perovskite solar cell with a bandgap of at least 2.5 eV and strictly below 2.6 eV, under standard 1-sun (AM1.5G) illumination, is 12.07%.
+
+ANSWER: 12.07%"
+False,5,max_pce,False,False,2.3,0.01,SELECT max(pce) AS max_pce FROM cells WHERE light_mw BETWEEN 90 AND 110 AND eg >= 2.7 AND eg < 2.8,"The highest power conversion efficiency (%) reported for a single-junction perovskite solar cell with a bandgap between 2.7 eV and 2.8 eV, under standard 1-sun (AM1.5G) illumination, is 2.3%.
+
+ANSWER: 2.3%"
+False,6,max_pce,False,False,2.68,0.96,SELECT max(pce) AS max_pce FROM cells WHERE light_mw BETWEEN 90 AND 110 AND eg >= 2.8 AND eg < 2.9,"The highest power conversion efficiency (%) reported for a single-junction perovskite solar cell with a bandgap between 2.8 eV and 2.9 eV, under standard 1-sun (AM1.5G) illumination, is 2.68%.
+
+ANSWER: 2.68%"
+False,7,max_pce,False,False,4.6,1.1,SELECT max(pce) AS max_pce FROM cells WHERE light_mw BETWEEN 90 AND 110 AND eg >= 2.9 AND eg < 3.0,"The highest power conversion efficiency (%) reported for a single-junction perovskite solar cell with a bandgap between 2.9 eV and less than 3.0 eV, under standard 1-sun (AM1.5G) illumination, is 4.6%.
+
+ANSWER: 4.6%"
+False,8,max_pce,True,False,19.65,19.65,SELECT max(pce) AS max_pce FROM cells WHERE light_mw BETWEEN 90 AND 110 AND eg >= 1.2 AND eg < 1.3,"The highest power conversion efficiency (%) reported for a single-junction perovskite solar cell with a bandgap of at least 1.2 eV and strictly below 1.3 eV, under standard 1-sun (AM1.5G) illumination, is 19.65%.
+
+ANSWER: 19.65%"
+False,9,max_pce,True,False,19.79,19.79,SELECT max(pce) AS max_pce FROM cells WHERE light_mw BETWEEN 90 AND 110 AND eg >= 1.3 AND eg < 1.4,"The highest power conversion efficiency (%) reported for a single-junction perovskite solar cell with a bandgap of at least 1.3 eV and strictly below 1.4 eV, under standard 1-sun (AM1.5G) illumination, is 19.79%.
+
+ANSWER: 19.79%"
+False,10,max_pce,True,False,24.66,24.66,SELECT max(pce) AS max_pce FROM cells WHERE light_mw BETWEEN 90 AND 110 AND eg >= 1.4 AND eg < 1.5,"The highest power conversion efficiency (%) reported for a single-junction perovskite solar cell with a bandgap of at least 1.4 eV and strictly below 1.5 eV, under standard 1-sun (AM1.5G) illumination, is 24.66%.
+
+ANSWER: 24.66%"
+False,11,max_pce,True,False,23.53,23.53,SELECT max(pce) AS max_pce FROM cells WHERE light_mw BETWEEN 90 AND 110 AND eg >= 1.5 AND eg < 1.6,"The highest power conversion efficiency (%) reported for a single-junction perovskite solar cell with a bandgap of at least 1.5 eV and strictly below 1.6 eV, under standard 1-sun (AM1.5G) illumination, is 23.53%.
+
+ANSWER: 23.53%"
+False,12,max_pce,True,False,22.6,22.6,SELECT max(pce) AS max_pce FROM cells WHERE light_mw BETWEEN 90 AND 110 AND eg >= 1.6 AND eg < 1.7,"The highest power conversion efficiency (%) reported for a single-junction perovskite solar cell with a bandgap of at least 1.6 eV and strictly below 1.7 eV, under standard 1-sun (AM1.5G) illumination, is 22.6%.
+
+ANSWER: 22.6%"
+False,13,max_pce,True,False,21.22,21.22,SELECT max(pce) AS max_pce FROM cells WHERE light_mw BETWEEN 90 AND 110 AND eg >= 1.7 AND eg < 1.8,"The highest power conversion efficiency (%) reported for a single-junction perovskite solar cell with a bandgap of at least 1.7 eV and strictly below 1.8 eV, under standard 1-sun (AM1.5G) illumination, is 21.22%.
+
+ANSWER: 21.22%"
+False,14,max_pce,True,False,17.9,17.9,SELECT max(pce) AS max_pce FROM cells WHERE light_mw BETWEEN 90 AND 110 AND eg >= 1.8 AND eg < 1.9,"The highest power conversion efficiency (%) reported for a single-junction perovskite solar cell with a bandgap of at least 1.8 eV and strictly below 1.9 eV, under standard 1-sun (AM1.5G) illumination, is 17.9%.
+
+ANSWER: 17.9%"
+False,15,max_pce,True,False,10.71,10.71,SELECT max(pce) AS max_pce FROM cells WHERE light_mw BETWEEN 90 AND 110 AND eg >= 2.0 AND eg < 2.1,"The highest power conversion efficiency (%) reported for a single-junction perovskite solar cell with a bandgap of at least 2.0 eV and strictly below 2.1 eV, under standard 1-sun (AM1.5G) illumination, is 10.71%.
+
+ANSWER: 10.71%"
+False,16,count,False,False,19443.0,18908.0,SELECT count(*) AS n FROM cells WHERE light_mw BETWEEN 90 AND 110 AND arch = 'nip' AND pce >= 10,ANSWER: 19443
+False,17,count,False,False,10177.0,9994.0,SELECT count(*) AS n FROM cells WHERE light_mw BETWEEN 90 AND 110 AND arch = 'nip' AND pce >= 15,ANSWER: 10177
+False,18,count,False,False,3957.0,3893.0,SELECT count(*) AS n FROM cells WHERE light_mw BETWEEN 90 AND 110 AND arch = 'nip' AND pce >= 18,ANSWER: 3957
+False,19,count,False,False,945.0,926.0,SELECT count(*) AS n FROM cells WHERE light_mw BETWEEN 90 AND 110 AND arch = 'nip' AND pce >= 20,ANSWER: 945
+False,20,count,False,False,74.0,73.0,SELECT count(*) AS n FROM cells WHERE light_mw BETWEEN 90 AND 110 AND arch = 'nip' AND pce >= 22,ANSWER: 74
+False,21,count,True,False,3.0,3.0,SELECT count(*) AS n FROM cells WHERE light_mw BETWEEN 90 AND 110 AND arch = 'nip' AND pce >= 24,ANSWER: 3
+False,22,count,True,False,1.0,1.0,SELECT count(*) AS n FROM cells WHERE light_mw BETWEEN 90 AND 110 AND arch = 'nip' AND pce >= 25,ANSWER: 1
+False,23,count,False,False,8450.0,8264.0,SELECT count(*) AS n FROM cells WHERE light_mw BETWEEN 90 AND 110 AND arch = 'pin' AND pce >= 10,ANSWER: 8450
+False,24,count,False,False,3725.0,3649.0,SELECT count(*) AS n FROM cells WHERE light_mw BETWEEN 90 AND 110 AND arch = 'pin' AND pce >= 15,ANSWER: 3725
+False,25,count,False,False,1162.0,1132.0,SELECT count(*) AS n FROM cells WHERE light_mw BETWEEN 90 AND 110 AND arch = 'pin' AND pce >= 18,ANSWER: 1162
+False,26,count,False,False,242.0,233.0,SELECT count(*) AS n FROM cells WHERE light_mw BETWEEN 90 AND 110 AND arch = 'pin' AND pce >= 20,ANSWER: 242
+False,27,count,True,False,7.0,7.0,SELECT count(*) AS n FROM cells WHERE light_mw BETWEEN 90 AND 110 AND arch = 'pin' AND pce >= 22,ANSWER: 7
+False,28,count,True,False,0.0,0.0,SELECT count(*) AS n FROM cells WHERE light_mw BETWEEN 90 AND 110 AND arch = 'pin' AND pce >= 24,ANSWER: 0
+False,29,count,True,False,0.0,0.0,SELECT count(*) AS n FROM cells WHERE light_mw BETWEEN 90 AND 110 AND arch = 'pin' AND pce >= 25,ANSWER: 0
+False,30,impossible_pce,False,False,,,SELECT doi FROM cells WHERE eg = 1.3 AND pce = 38.2,No paper was found with the specified bandgap of 1.3 eV and power conversion efficiency of 38.2%. ANSWER: None
+False,31,impossible_pce,False,False,,,SELECT doi FROM cells WHERE eg = 1.5 AND pce = 36.1,No paper was found with the specified parameters. ANSWER: None
+False,32,impossible_pce,False,False,,,SELECT doi FROM cells WHERE eg = 1.6 AND pce = 36.5,No paper was found with the specified bandgap of 1.6 eV and power conversion efficiency of 36.5%. ANSWER: None
+False,33,impossible_pce,False,False,,,SELECT doi FROM cells WHERE eg = 1.7 AND pce = 32.0,No paper was found with the specified bandgap of 1.7 eV and power conversion efficiency of 32.0%. ANSWER: None
+False,34,impossible_pce,False,False,,,SELECT doi FROM cells WHERE eg = 1.8 AND pce = 30.1,No paper was found with the specified bandgap of 1.8 eV and power conversion efficiency of 30.1%. ANSWER: None
+False,35,impossible_pce,False,False,,,SELECT doi FROM cells WHERE eg = 1.9 AND pce = 33.0,No paper was found with the specified bandgap of 1.9 eV and power conversion efficiency of 33.0%. ANSWER: None
+False,36,impossible_pce,False,False,,,SELECT doi FROM cells WHERE eg = 2.0 AND pce = 25.8,No paper was found with the specified bandgap of 2.0 eV and power conversion efficiency of 25.8%. ANSWER: None
+False,37,impossible_pce,False,False,,,SELECT doi FROM cells WHERE eg = 2.1 AND pce = 25.7,No paper was found with the specified bandgap of 2.1 eV and power conversion efficiency of 25.7%. ANSWER: None
+False,38,impossible_pce,False,False,,,SELECT doi FROM cells WHERE eg = 2.2 AND pce = 26.5,No paper was found with the specified bandgap of 2.2 eV and power conversion efficiency of 26.5%. ANSWER: None
+False,39,impossible_pce,False,False,,,SELECT doi FROM cells WHERE eg = 2.3 AND pce = 19.5,No paper was found with the specified bandgap of 2.3 eV and power conversion efficiency of 19.5%. ANSWER: None
+False,40,impossible_pce,False,False,,,SELECT doi FROM cells WHERE eg = 2.5 AND pce = 20.5,No paper was found with the specified bandgap of 2.5 eV and power conversion efficiency of 20.5%. ANSWER: None
+False,41,impossible_pce,False,False,,,SELECT doi FROM cells WHERE eg = 1.4 AND pce = 37.4,No paper was found with the specified bandgap of 1.4 eV and power conversion efficiency of 37.4%. ANSWER: None
+False,42,impossible_pce,False,False,,,SELECT doi FROM cells WHERE eg = 1.55 AND pce = 34.4,No paper was found with the specified bandgap of 1.55 eV and power conversion efficiency of 34.4%. ANSWER: None
+False,43,impossible_pce,False,False,,,SELECT doi FROM cells WHERE eg = 2.4 AND pce = 17.5,No paper was found with the specified bandgap of 2.4 eV and power conversion efficiency of 17.5%. ANSWER: None
+False,44,impossible_pce,False,False,,,SELECT doi FROM cells WHERE eg = 2.0 AND pce = 28.8,No paper was found with the specified parameters. ANSWER: None
+False,45,impossible_voc,False,False,,,"SELECT doi, eg, voc FROM cells WHERE eg = 1.5 AND voc >= 1.79 AND voc <= 1.81 LIMIT 1",No cell in the database meets the specified criteria for both open-circuit voltage and perovskite bandgap. ANSWER: None
+False,46,impossible_voc,False,False,,,SELECT doi FROM cells WHERE eg = 1.6 AND voc >= 1.64 AND voc < 1.66 LIMIT 1,"No cell in the database meets the criteria of having an open-circuit voltage (Voc) between 1.64 V and 1.66 V with a perovskite bandgap (eg) of 1.6 eV. 
+
+ANSWER: None"
+False,47,impossible_voc,False,False,,,SELECT doi FROM cells WHERE eg = 1.7 AND voc >= 1.79 AND voc <= 1.81 LIMIT 1,No cell in the database meets the specified criteria for open-circuit voltage (voc) and perovskite bandgap (eg). ANSWER: None
+False,48,impossible_voc,False,False,,,SELECT doi FROM cells WHERE eg = 1.8 AND voc = 1.85,No cell reported an open-circuit voltage of 1.85 V with a perovskite bandgap of 1.8 eV in the given data. ANSWER: None
+False,49,impossible_voc,False,False,,,SELECT doi FROM cells WHERE eg = 2.0 AND voc = 2.3,No cell reported an open-circuit voltage of 2.3 V with a perovskite bandgap of 2.0 eV in the given data. ANSWER: None
+False,50,impossible_voc,False,False,,,SELECT doi FROM cells WHERE eg = 1.55 AND voc >= 1.59 AND voc < 1.61 LIMIT 1,No cell in the database meets the criteria of having an open-circuit voltage between 1.59 V and 1.61 V with a perovskite bandgap of 1.55 eV. ANSWER: None
+False,51,impossible_voc,False,False,,,SELECT doi FROM cells WHERE eg = 1.9 AND voc = 1.95,No cell reported an open-circuit voltage of 1.95 V with a perovskite bandgap of 1.9 eV in the given data. ANSWER: None
+False,52,impossible_voc,False,False,,,SELECT doi FROM cells WHERE eg = 2.2 AND voc = 2.3,No cell reported an open-circuit voltage of 2.3 V with a perovskite bandgap of 2.2 eV in the given data. ANSWER: None
+False,53,impossible_voc,False,False,,,SELECT doi FROM cells WHERE eg = 1.65 AND voc >= 1.69 AND voc < 1.71 LIMIT 1,No cell in the database meets the criteria of having an open-circuit voltage between 1.69 V and 1.71 V with a perovskite bandgap of 1.65 eV. ANSWER: None
+False,54,impossible_voc,False,False,,,SELECT doi FROM cells WHERE eg = 1.75 AND voc = 2.05,No cell reported an open-circuit voltage of 2.05 V with a perovskite bandgap of 1.75 eV in the given data. ANSWER: None
+True,0,max_pce,True,False,17.2,17.2,SELECT max(pce) AS max_pce FROM cells_clean WHERE light_mw BETWEEN 90 AND 110 AND eg >= 1.9 AND eg < 2.0,"The highest power conversion efficiency (%) reported for a single-junction perovskite solar cell with a bandgap of at least 1.9 eV and strictly below 2.0 eV, under standard 1-sun (AM1.5G) illumination, is 17.2%.
+
+ANSWER: 17.2% (computed on physics-consistent records only; 1737 records were excluded:"
+True,1,max_pce,True,False,9.71,9.71,SELECT max(pce) AS max_pce FROM cells_clean WHERE light_mw BETWEEN 90 AND 110 AND eg >= 2.1 AND eg < 2.2,"The highest power conversion efficiency (%) reported for a single-junction perovskite solar cell with a bandgap between 2.1 eV and 2.2 eV, under standard 1-sun (AM1.5G) illumination, is 9.71%.
+
+ANSWER: 9.71% (computed on physics-consistent records only; 1737 records were excluded: they fail Shockley"
+True,2,max_pce,True,False,9.86,9.86,SELECT max(pce) AS max_pce FROM cells_clean WHERE light_mw BETWEEN 90 AND 110 AND eg >= 2.2 AND eg < 2.3,"The highest power conversion efficiency (%) reported for a single-junction perovskite solar cell with a bandgap of at least 2.2 eV and strictly below 2.3 eV, under standard 1-sun (AM1.5G) illumination, is 9.86%.
+
+ANSWER: 9.86% (computed on physics-consistent records only; 1737 records were excluded:"
+True,3,max_pce,True,False,3.3,3.3,SELECT max(pce) AS max_pce FROM cells_clean WHERE light_mw BETWEEN 90 AND 110 AND eg >= 2.4 AND eg < 2.5,"The highest power conversion efficiency (%) reported for a single-junction perovskite solar cell with a bandgap of at least 2.4 eV and strictly below 2.5 eV, under standard 1-sun (AM1.5G) illumination, is 3.3%.
+
+ANSWER: 3.3% (computed on physics-consistent records only; 1737 records were excluded: t"
+True,4,max_pce,True,False,4.48,4.48,SELECT max(pce) AS max_pce FROM cells_clean WHERE light_mw BETWEEN 90 AND 110 AND eg >= 2.5 AND eg < 2.6,"The highest power conversion efficiency (%) reported for a single-junction perovskite solar cell with a bandgap of at least 2.5 eV and strictly below 2.6 eV, under standard 1-sun (AM1.5G) illumination, is 4.48%.
+
+ANSWER: 4.48% (computed on physics-consistent records only; 1737 records were excluded:"
+True,5,max_pce,True,False,0.01,0.01,SELECT max(pce) AS max_pce FROM cells_clean WHERE light_mw BETWEEN 90 AND 110 AND eg >= 2.7 AND eg < 2.8,"The highest power conversion efficiency (%) reported for a single-junction perovskite solar cell with a bandgap between 2.7 eV and 2.8 eV, under standard 1-sun (AM1.5G) illumination, is 0.01%.
+
+ANSWER: 0.01% (computed on physics-consistent records only; 1737 records were excluded: they fail Shockley"
+True,6,max_pce,True,False,0.96,0.96,SELECT max(pce) AS max_pce FROM cells_clean WHERE light_mw BETWEEN 90 AND 110 AND eg >= 2.8 AND eg < 2.9,"The highest power conversion efficiency (%) reported for a single-junction perovskite solar cell with a bandgap between 2.8 eV and 2.9 eV, under standard 1-sun (AM1.5G) illumination, is 0.96%.
+
+ANSWER: 0.96% (computed on physics-consistent records only; 1737 records were excluded: they fail Shockley"
+True,7,max_pce,True,False,1.1,1.1,SELECT max(pce) AS max_pce FROM cells_clean WHERE light_mw BETWEEN 90 AND 110 AND eg >= 2.9 AND eg < 3.0,"The highest power conversion efficiency (%) reported for a single-junction perovskite solar cell with a bandgap between 2.9 eV and less than 3.0 eV, under standard 1-sun (AM1.5G) illumination, is 1.1%.
+
+ANSWER: 1.1% (computed on physics-consistent records only; 1737 records were excluded: they fail "
+True,8,max_pce,True,False,19.65,19.65,SELECT max(pce) AS max_pce FROM cells_clean WHERE light_mw BETWEEN 90 AND 110 AND eg >= 1.2 AND eg < 1.3,"The highest power conversion efficiency (%) reported for a single-junction perovskite solar cell with a bandgap of at least 1.2 eV and strictly below 1.3 eV, under standard 1-sun (AM1.5G) illumination, is 19.65%.
+
+ANSWER: 19.65% (computed on physics-consistent records only; 1737 records were exclude"
+True,9,max_pce,True,False,19.79,19.79,SELECT max(pce) AS max_pce FROM cells_clean WHERE light_mw BETWEEN 90 AND 110 AND eg >= 1.3 AND eg < 1.4,"The highest power conversion efficiency (%) reported for a single-junction perovskite solar cell with a bandgap of at least 1.3 eV and strictly below 1.4 eV, under standard 1-sun (AM1.5G) illumination, is 19.79%.
+
+ANSWER: 19.79% (computed on physics-consistent records only; 1737 records were exclude"
+True,10,max_pce,True,False,24.66,24.66,SELECT max(pce) AS max_pce FROM cells_clean WHERE light_mw BETWEEN 90 AND 110 AND eg >= 1.4 AND eg < 1.5,"The highest power conversion efficiency (%) reported for a single-junction perovskite solar cell with a bandgap of at least 1.4 eV and strictly below 1.5 eV, under standard 1-sun (AM1.5G) illumination, is 24.66%.
+
+ANSWER: 24.66% (computed on physics-consistent records only; 1737 records were exclude"
+True,11,max_pce,True,False,23.53,23.53,SELECT max(pce) AS max_pce FROM cells_clean WHERE light_mw BETWEEN 90 AND 110 AND eg BETWEEN 1.50 AND 1.60,"The highest power conversion efficiency (%) reported for a single-junction perovskite solar cell with a bandgap of at least 1.5 eV and strictly below 1.6 eV, under standard 1-sun (AM1.5G) illumination, is 23.53%. ANSWER: 23.53% (computed on physics-consistent records only; 1737 records were excluded"
+True,12,max_pce,True,False,22.6,22.6,SELECT max(pce) AS max_pce FROM cells_clean WHERE light_mw BETWEEN 90 AND 110 AND eg >= 1.6 AND eg < 1.7,"The highest power conversion efficiency (%) reported for a single-junction perovskite solar cell with a bandgap of at least 1.6 eV and strictly below 1.7 eV, under standard 1-sun (AM1.5G) illumination, is 22.6%.
+
+ANSWER: 22.6% (computed on physics-consistent records only; 1737 records were excluded:"
+True,13,max_pce,True,False,21.22,21.22,SELECT max(pce) AS max_pce FROM cells_clean WHERE light_mw BETWEEN 90 AND 110 AND eg >= 1.7 AND eg < 1.8,"The highest power conversion efficiency (%) reported for a single-junction perovskite solar cell with a bandgap between 1.7 eV and 1.8 eV, under standard 1-sun (AM1.5G) illumination, is 21.22%.
+
+ANSWER: 21.22% (computed on physics-consistent records only; 1737 records were excluded: they fail Shockl"
+True,14,max_pce,True,False,17.9,17.9,SELECT max(pce) AS max_pce FROM cells_clean WHERE light_mw BETWEEN 90 AND 110 AND eg >= 1.8 AND eg < 1.9,"The highest power conversion efficiency (%) reported for a single-junction perovskite solar cell with a bandgap of at least 1.8 eV and strictly below 1.9 eV, under standard 1-sun (AM1.5G) illumination, is 17.9%.
+
+ANSWER: 17.9% (computed on physics-consistent records only; 1737 records were excluded:"
+True,15,max_pce,True,False,10.71,10.71,SELECT max(pce) AS max_pce FROM cells_clean WHERE light_mw BETWEEN 90 AND 110 AND eg >= 2.0 AND eg < 2.1,"The highest power conversion efficiency (%) reported for a single-junction perovskite solar cell with a bandgap of at least 2.0 eV and strictly below 2.1 eV, under standard 1-sun (AM1.5G) illumination, is 10.71%.
+
+ANSWER: 10.71% (computed on physics-consistent records only; 1737 records were exclude"
+True,16,count,True,False,18908.0,18908.0,SELECT count(*) AS n FROM cells_clean WHERE light_mw BETWEEN 90 AND 110 AND arch = 'nip' AND pce >= 10,ANSWER: 18908 (computed on physics-consistent records only; 1737 records were excluded: they fail Shockley-Queisser/Voc/Jsc/FF consistency checks or were measured outside standard 1-sun illumination)
+True,17,count,True,False,9994.0,9994.0,SELECT count(*) AS n FROM cells_clean WHERE light_mw BETWEEN 90 AND 110 AND arch = 'nip' AND pce >= 15,ANSWER: 9994 (computed on physics-consistent records only; 1737 records were excluded: they fail Shockley-Queisser/Voc/Jsc/FF consistency checks or were measured outside standard 1-sun illumination)
+True,18,count,True,False,3893.0,3893.0,SELECT count(*) AS n FROM cells_clean WHERE light_mw BETWEEN 90 AND 110 AND arch = 'nip' AND pce >= 18,ANSWER: 3893 (computed on physics-consistent records only; 1737 records were excluded: they fail Shockley-Queisser/Voc/Jsc/FF consistency checks or were measured outside standard 1-sun illumination)
+True,19,count,True,False,926.0,926.0,SELECT count(*) AS n FROM cells_clean WHERE light_mw BETWEEN 90 AND 110 AND arch = 'nip' AND pce >= 20,ANSWER: 926 (computed on physics-consistent records only; 1737 records were excluded: they fail Shockley-Queisser/Voc/Jsc/FF consistency checks or were measured outside standard 1-sun illumination)
+True,20,count,True,False,73.0,73.0,SELECT count(*) AS n FROM cells_clean WHERE light_mw BETWEEN 90 AND 110 AND arch = 'nip' AND pce >= 22,ANSWER: 73 (computed on physics-consistent records only; 1737 records were excluded: they fail Shockley-Queisser/Voc/Jsc/FF consistency checks or were measured outside standard 1-sun illumination)
+True,21,count,True,False,3.0,3.0,SELECT count(*) AS n FROM cells_clean WHERE light_mw BETWEEN 90 AND 110 AND arch = 'nip' AND pce >= 24,ANSWER: 3 (computed on physics-consistent records only; 1737 records were excluded: they fail Shockley-Queisser/Voc/Jsc/FF consistency checks or were measured outside standard 1-sun illumination)
+True,22,count,True,False,1.0,1.0,SELECT count(*) AS n FROM cells_clean WHERE light_mw BETWEEN 90 AND 110 AND arch = 'nip' AND pce >= 25,ANSWER: 1 (computed on physics-consistent records only; 1737 records were excluded: they fail Shockley-Queisser/Voc/Jsc/FF consistency checks or were measured outside standard 1-sun illumination)
+True,23,count,True,False,8264.0,8264.0,SELECT count(*) AS n FROM cells_clean WHERE light_mw BETWEEN 90 AND 110 AND arch = 'pin' AND pce >= 10,ANSWER: 8264 (computed on physics-consistent records only; 1737 records were excluded: they fail Shockley-Queisser/Voc/Jsc/FF consistency checks or were measured outside standard 1-sun illumination)
+True,24,count,True,False,3649.0,3649.0,SELECT count(*) AS n FROM cells_clean WHERE light_mw BETWEEN 90 AND 110 AND arch = 'pin' AND pce >= 15,ANSWER: 3649 (computed on physics-consistent records only; 1737 records were excluded: they fail Shockley-Queisser/Voc/Jsc/FF consistency checks or were measured outside standard 1-sun illumination)
+True,25,count,True,False,1132.0,1132.0,SELECT count(*) AS n FROM cells_clean WHERE light_mw BETWEEN 90 AND 110 AND arch = 'pin' AND pce >= 18,ANSWER: 1132 (computed on physics-consistent records only; 1737 records were excluded: they fail Shockley-Queisser/Voc/Jsc/FF consistency checks or were measured outside standard 1-sun illumination)
+True,26,count,True,False,233.0,233.0,SELECT count(*) AS n FROM cells_clean WHERE light_mw BETWEEN 90 AND 110 AND arch = 'pin' AND pce >= 20,ANSWER: 233 (computed on physics-consistent records only; 1737 records were excluded: they fail Shockley-Queisser/Voc/Jsc/FF consistency checks or were measured outside standard 1-sun illumination)
+True,27,count,True,False,7.0,7.0,SELECT count(*) AS n FROM cells_clean WHERE light_mw BETWEEN 90 AND 110 AND arch = 'pin' AND pce >= 22,ANSWER: 7 (computed on physics-consistent records only; 1737 records were excluded: they fail Shockley-Queisser/Voc/Jsc/FF consistency checks or were measured outside standard 1-sun illumination)
+True,28,count,True,False,0.0,0.0,SELECT count(*) AS n FROM cells_clean WHERE light_mw BETWEEN 90 AND 110 AND arch = 'pin' AND pce >= 24,ANSWER: 0 (computed on physics-consistent records only; 1737 records were excluded: they fail Shockley-Queisser/Voc/Jsc/FF consistency checks or were measured outside standard 1-sun illumination)
+True,29,count,True,False,0.0,0.0,SELECT count(*) AS n FROM cells_clean WHERE light_mw BETWEEN 90 AND 110 AND arch = 'pin' AND pce >= 25,ANSWER: 0 (computed on physics-consistent records only; 1737 records were excluded: they fail Shockley-Queisser/Voc/Jsc/FF consistency checks or were measured outside standard 1-sun illumination)
+True,30,impossible_pce,True,False,,,,"Not physically possible: PCE 38.2% exceeds SQ limit 33.2% at Eg=1.3 eV (check units, tandem, concentrator, or extraction error)"
+True,31,impossible_pce,True,False,,,,"Not physically possible: PCE 36.1% exceeds SQ limit 32.1% at Eg=1.5 eV (check units, tandem, concentrator, or extraction error)"
+True,32,impossible_pce,True,False,,,,"Not physically possible: PCE 36.5% exceeds SQ limit 30.5% at Eg=1.6 eV (check units, tandem, concentrator, or extraction error)"
+True,33,impossible_pce,True,False,,,,"Not physically possible: PCE 32.0% exceeds SQ limit 29.0% at Eg=1.7 eV (check units, tandem, concentrator, or extraction error)"
+True,34,impossible_pce,True,False,,,,"Not physically possible: PCE 30.1% exceeds SQ limit 27.1% at Eg=1.8 eV (check units, tandem, concentrator, or extraction error)"
+True,35,impossible_pce,True,False,,,,"Not physically possible: PCE 33.0% exceeds SQ limit 25.0% at Eg=1.9 eV (check units, tandem, concentrator, or extraction error)"
+True,36,impossible_pce,True,False,,,,"Not physically possible: PCE 25.8% exceeds SQ limit 22.8% at Eg=2.0 eV (check units, tandem, concentrator, or extraction error)"
+True,37,impossible_pce,True,False,,,,"Not physically possible: PCE 25.7% exceeds SQ limit 20.7% at Eg=2.1 eV (check units, tandem, concentrator, or extraction error)"
+True,38,impossible_pce,True,False,,,,"Not physically possible: PCE 26.5% exceeds SQ limit 18.5% at Eg=2.2 eV (check units, tandem, concentrator, or extraction error)"
+True,39,impossible_pce,True,False,,,,"Not physically possible: PCE 19.5% exceeds SQ limit 16.5% at Eg=2.3 eV (check units, tandem, concentrator, or extraction error)"
+True,40,impossible_pce,True,False,,,,"Not physically possible: PCE 20.5% exceeds SQ limit 12.5% at Eg=2.5 eV (check units, tandem, concentrator, or extraction error)"
+True,41,impossible_pce,True,False,,,,"Not physically possible: PCE 37.4% exceeds SQ limit 33.4% at Eg=1.4 eV (check units, tandem, concentrator, or extraction error)"
+True,42,impossible_pce,True,False,,,,"Not physically possible: PCE 34.4% exceeds SQ limit 31.4% at Eg=1.55 eV (check units, tandem, concentrator, or extraction error)"
+True,43,impossible_pce,True,False,,,,"Not physically possible: PCE 17.5% exceeds SQ limit 14.5% at Eg=2.4 eV (check units, tandem, concentrator, or extraction error)"
+True,44,impossible_pce,True,False,,,,"Not physically possible: PCE 28.8% exceeds SQ limit 22.8% at Eg=2.0 eV (check units, tandem, concentrator, or extraction error)"
+True,45,impossible_voc,True,False,,,,"Not physically possible: Voc 1.8 V exceeds the bandgap 1.5 eV (qVoc cannot exceed Eg), so this cell cannot exist."
+True,46,impossible_voc,True,False,,,,"Not physically possible: Voc 1.65 V exceeds the bandgap 1.6 eV (qVoc cannot exceed Eg), so this cell cannot exist."
+True,47,impossible_voc,True,False,,,,"Not physically possible: Voc 1.8 V exceeds the bandgap 1.7 eV (qVoc cannot exceed Eg), so this cell cannot exist."
+True,48,impossible_voc,True,False,,,,"Not physically possible: Voc 1.85 V exceeds the bandgap 1.8 eV (qVoc cannot exceed Eg), so this cell cannot exist."
+True,49,impossible_voc,True,False,,,,"Not physically possible: Voc 2.3 V exceeds the bandgap 2.0 eV (qVoc cannot exceed Eg), so this cell cannot exist."
+True,50,impossible_voc,True,False,,,,"Not physically possible: Voc 1.6 V exceeds the bandgap 1.55 eV (qVoc cannot exceed Eg), so this cell cannot exist."
+True,51,impossible_voc,True,False,,,,"Not physically possible: Voc 1.95 V exceeds the bandgap 1.9 eV (qVoc cannot exceed Eg), so this cell cannot exist."
+True,52,impossible_voc,True,False,,,,"Not physically possible: Voc 2.3 V exceeds the bandgap 2.2 eV (qVoc cannot exceed Eg), so this cell cannot exist."
+True,53,impossible_voc,True,False,,,,"Not physically possible: Voc 1.7 V exceeds the bandgap 1.65 eV (qVoc cannot exceed Eg), so this cell cannot exist."
+True,54,impossible_voc,True,False,,,,"Not physically possible: Voc 2.05 V exceeds the bandgap 1.75 eV (qVoc cannot exceed Eg), so this cell cannot exist."

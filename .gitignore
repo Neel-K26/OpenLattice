@@ -1,0 +1,10 @@
+data/
+*.duckdb
+__pycache__/
+.ipynb_checkpoints/
+papers/
+out/
+*.zip
+patch_agent.py
+sql_prompt_new.txt
+audit_perovskite.py

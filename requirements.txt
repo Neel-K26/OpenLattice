@@ -1,0 +1,10 @@
+pandas
+numpy
+scipy
+matplotlib
+duckdb
+transformers
+accelerate
+torch
+marimo
+ipywidgets
