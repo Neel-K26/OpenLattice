@@ -112,7 +112,7 @@ python make_questions.py && python run_eval.py && python analyze.py
 
 ## Team
 
-**Neel Khairnar** (lead: code and strategy) · **Mayur Kharche**
+**Neel Khairnar** (lead: code and strategy) · **Mayur Kharche** (Write-up and Refining Submission )
 
 ## License
 
