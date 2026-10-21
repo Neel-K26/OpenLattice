@@ -80,7 +80,19 @@ Where the failures come from: most are PCE that disagrees with Voc × Jsc × FF 
 - **"Fails a check" means inconsistent as recorded, not proven wrong.** Some mismatches mix an average with a champion value. We checked a small sample against source papers, not all of them.
 - **The ground truth is defined by our own filter**, so accuracy figures describe how often the raw table's answer is affected, not an independent score.
 - **The impossible-premise result comes from a deterministic rule**, not from model intelligence. The baseline did not make anything up; it just never explained why nothing exists.
-- One database, one 7B model, 55 questions. Related work exists on LLM extraction and question answering over this database (for example PERLA and structured-retrieval benchmarks); to our knowledge, the physics-consistency audit and the answer-time gate with refusals are the new parts.
+- One database, one 7B model, 55 questions.
+- Related work exists (see below). To our knowledge, the new parts are applying a detailed-balance (Shockley–Queisser) consistency audit to the Perovskite Database with quantified results, and an answer-time gate that restricts SQL answers to consistent 1-sun records and refuses impossible premises. We have not exhaustively searched for prior work.
+
+## Related work (found with Valency semantic search)
+
+| Work | Relation to OpenLattice |
+|---|---|
+| [PERLA: an autonomous living database for perovskite photovoltaics](https://arxiv.org/abs/2601.17807) | LLM-based extraction and validation for the perovskite database; we audit and gate answers over the existing curated records |
+| [Benchmark for Structured RAG in Perovskite Photovoltaics](https://arxiv.org/abs/2610.25575) | question answering over the same data; we add a physics layer on top of structured retrieval |
+| [Perovskite-LLM](https://arxiv.org/abs/2502.12669) | domain-tuned language model for perovskite research |
+| [Grounded verification of chemical and materials reasoning](https://arxiv.org/abs/2607.17417) | closest in spirit: deterministic claim checks against databases and physical law for formulas and structures; ours targets photovoltaic device records and the Shockley–Queisser limit |
+| [Physics as the label (MatPCR)](https://arxiv.org/abs/2609.12181) | physical-consistency benchmark for materials reasoning |
+| [When Literature Data Mislead AI in Materials Discovery](https://arxiv.org/abs/2609.01621) | shows literature-derived values are often not internally consistent (solid electrolytes); our audit quantifies this for perovskite devices |
 
 ## Quickstart
 
@@ -112,7 +124,7 @@ python make_questions.py && python run_eval.py && python analyze.py
 
 ## Team
 
-**Neel Khairnar** (lead: code and strategy) · **Mayur Kharche** (Write-up and Refining Submission )
+**Neel Khairnar** (lead: code and strategy) · **Mayur Kharche**
 
 ## License
 
